@@ -1,0 +1,18 @@
+[package]
+name = "ex_smart_contact"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+ink_lang = { version = "3.0", default-features = false }
+
+[lib]
+name = "ex_smart_contact"
+crate-type = ["cdylib"]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink_lang/std",
+]
